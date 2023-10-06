@@ -10,45 +10,45 @@ import java.util.Arrays;
 //
 //For example, inverting [0,1,1] results in [1,0,0].
 //
-//class Solution {
-//    public int[][] flipAndInvertImage(int[][] image) {
-//        // Reverse(image);
-//        // // Inverse(image);
-//        // return  image;
-//        for(int[] row :image){
-//            for(int i=0;i<(image[0].length+1)/2;i++){
-//                int temp=row[i]^1;
-//                row[i]=row[image[0].length-i-1]^1;
-//                row[image[0].length-1-i]=temp;
-//            }
-//        }
-//        return image;
-//
-//    }
+class Solution {
+   public int[][] flipAndInvertImage(int[][] image) {
+       // Reverse(image);
+       // // Inverse(image);
+       // return  image;
+       for(int[] row :image){
+           for(int i=0;i<(image[0].length+1)/2;i++){
+               int temp=row[i]^1;
+               row[i]=row[image[0].length-i-1]^1;
+               row[image[0].length-1-i]=temp;
+           }
+       }
+       return image;
 
-    //   public static void Reverse(int arr[][]) {
+   }
 
-    // 	for(int i=0;i<arr.length;i++) {
-    // 		int start=0;
-    // 		int end=arr[i].length-1;
-    // 		while(start<end) {
-    // 			int temp=arr[i][start]^1;
-    // 			arr[i][start]=arr[i][end] ^1;
-    // 			arr[i][end]=temp;
-    // 			start++;
-    // 			end--;
+      public static void Reverse(int arr[][]) {
 
-    // 		}
-    // 	}
+    	for(int i=0;i<arr.length;i++) {
+    		int start=0;
+    		int end=arr[i].length-1;
+    		while(start<end) {
+    			int temp=arr[i][start]^1;
+    			arr[i][start]=arr[i][end] ^1;
+    			arr[i][end]=temp;
+    			start++;
+    			end--;
 
-    // }
+    		}
+    	}
 
-    //   public static void Inverse(int arr[][]) {
+    }
 
-    // 	for(int i=0;i<arr.length;i++) {
-    // 		for(int j=0;j<arr[i].length;j++) {
-    // 			arr[i][j]=arr[i][j]^1;
-    // 		}
-    // 	}
-    // }
-//}
+      public static void Inverse(int arr[][]) {
+
+    	for(int i=0;i<arr.length;i++) {
+    		for(int j=0;j<arr[i].length;j++) {
+    			arr[i][j]=arr[i][j]^1;
+    		}
+    	}
+    }
+}

@@ -7,23 +7,23 @@
 //        Note that multiple kids can have the greatest number of candies.
 
 
-//class Solution {
-//    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-//        int Great=0;
-//        for(int i=0;i<candies.length;i++){
-//            Great=Math.max(candies[i],Great);
-//        }
-//        ArrayList<Boolean> List=new ArrayList<>();
-//        for(int i=0;i<candies.length;i++){
-//            if(extraCandies+candies[i]>=Great){
-//                List.add(true);
-//            }
-//            else{
-//                List.add(false);
-//            }
-//        }
-//
-//        return List;
-//
-//    }
-//}
+class Solution {
+   public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+       int Great=0;
+       for(int i=0;i<candies.length;i++){
+           Great=Math.max(candies[i],Great);
+       }
+       ArrayList<Boolean> List=new ArrayList<>();
+       for(int i=0;i<candies.length;i++){
+           if(extraCandies+candies[i]>=Great){
+               List.add(true);
+           }
+           else{
+               List.add(false);
+           }
+       }
+
+       return List;
+
+   }
+}

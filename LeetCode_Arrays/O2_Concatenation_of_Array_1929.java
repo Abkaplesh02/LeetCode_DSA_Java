@@ -6,17 +6,17 @@ import java.util.Arrays;
 //        Specifically, ans is the concatenation of two nums arrays.
 //
 //        Return the array ans.
-//class Solution {
-//    public int[] getConcatenation(int[] nums) {
-//
-//        int arr[]=new int[2*(nums.length)];
-//
-//        for(int i=0;i<nums.length;i++){
-//            arr[i]=nums[i];
-//            arr[nums.length+i]=nums[i];
-//        }
-//        return arr;
-//
-//
-//    }
-//}
+class Solution {
+   public int[] getConcatenation(int[] nums) {
+
+       int arr[]=new int[2*(nums.length)];
+
+       for(int i=0;i<nums.length;i++){
+           arr[i]=nums[i];
+           arr[nums.length+i]=nums[i];
+       }
+       return arr;
+
+
+   }
+}

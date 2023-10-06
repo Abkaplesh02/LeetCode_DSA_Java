@@ -12,29 +12,29 @@ import java.util.Scanner;
 //Return the number of items that match the given rule.
 //
 //
-//class Solution {
-//
-//
-//
-//    public  int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
-//        int count=0;
-//        int checkI=0;
-//        if(ruleKey.equals("color")){
-//            checkI=1;
-//        }
-//        if(ruleKey.equals("name")){
-//            checkI=2;
-//        }
-//
-//        for(int i=0;i<items.size();i++){
-//            if(items.get(i).get(checkI).equals(ruleValue)){
-//                count++;
-//            }
-//        }
-//
-//
-//
-//        return count;
-//    }
-//
-//}
+class Solution {
+
+
+
+   public  int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+       int count=0;
+       int checkI=0;
+       if(ruleKey.equals("color")){
+           checkI=1;
+       }
+       if(ruleKey.equals("name")){
+           checkI=2;
+       }
+
+       for(int i=0;i<items.size();i++){
+           if(items.get(i).get(checkI).equals(ruleValue)){
+               count++;
+           }
+       }
+
+
+
+       return count;
+   }
+
+}
